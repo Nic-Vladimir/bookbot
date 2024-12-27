@@ -5,7 +5,7 @@ def main() -> int:
     book_path = "books/frankenstein.txt"
     file_contents = get_file_contents(book_path)
     word_count = get_word_count(file_contents)
-    char_dict = count_chars(file_contents)
+    char_dict = get_chars_count(file_contents)
     char_sorted_list = sort_dict(char_dict)
 
     print(f"--- Begin report of book: Frankenstein ---")
@@ -30,7 +30,7 @@ def get_word_count(file_contents) -> int:
     words = file_contents.split()
     return len(words)
 
-def count_chars(file_contents) -> int:
+def get_chars_count(file_contents) -> int:
     """Returns the number of characters in the file"""
     chars = {}
     text = file_contents.lower()
